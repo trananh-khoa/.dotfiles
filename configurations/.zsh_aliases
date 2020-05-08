@@ -1,0 +1,12 @@
+# Avoid issues with pyenv warnings
+alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
+
+# Show/hide hidden files in Finder
+alias show-files="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide-files="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# CLean out trash and downloads folders
+alias clean='rm -rf ~/.Trash/*; rm -rf ~/Downloads/*'
+
+# Enable aliases to be run with superuser privileges
+alias sudo='sudo '
