@@ -6,13 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Source aliases
-source $HOME/.zsh_aliases
+source ${HOME}/.zsh_aliases
 
 # Source antigen
-source $HOME/.antigenrc
+source ${HOME}/.antigenrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
+[[ ! -f ${HOME}/.p10k.zsh ]] || source ${HOME}/.p10k.zsh
 
 # Load iTerm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
