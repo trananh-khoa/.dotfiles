@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Paths
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
 # Source aliases
 source ${HOME}/.zsh_aliases
 
