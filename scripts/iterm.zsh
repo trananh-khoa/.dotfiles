@@ -8,6 +8,10 @@
 
 git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git
 
+# Install shell integration
+
+curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
+
 # Set preferences folder
 
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string '~/.dotfiles/configurations/'
