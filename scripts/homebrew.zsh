@@ -11,6 +11,7 @@
 # Install general command line packages
 
 brew install ack                        # Replacement for grep
+brew install autoenv                    # Automatic enviornment activation
 brew install tree                       # Quick look into file structures
 brew install vim                        # Lightweight text editor
 
