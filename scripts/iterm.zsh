@@ -20,3 +20,7 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 # Remove iTerm2 colour schemes
 
 rm -rf ~/iTerm2-Color-Schemes
+
+# Install antigen
+
+brew install antigen
