@@ -57820,7 +57820,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>-1925 899 841 470 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1002 10 1002 824 -3008 0 3008 1669 </string>
+	<string>-1002 0 1002 1669 -3008 0 3008 1669 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -58528,6 +58528,15 @@
 				<key>Red Component</key>
 				<real>0.70196080207824707</real>
 			</dict>
+			<key>Semantic History</key>
+			<dict>
+				<key>action</key>
+				<string>editor</string>
+				<key>editor</key>
+				<string>com.microsoft.VSCode</string>
+				<key>text</key>
+				<string></string>
+			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Shortcut</key>
@@ -59228,6 +59237,15 @@
 				<key>Red Component</key>
 				<real>0.94999999999999996</real>
 			</dict>
+			<key>Semantic History</key>
+			<dict>
+				<key>action</key>
+				<string>editor</string>
+				<key>editor</key>
+				<string>com.microsoft.VSCode</string>
+				<key>text</key>
+				<string></string>
+			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Shortcut</key>
@@ -59302,7 +59320,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>EFFFC2D3-7ED9-47C5-90F9-40BC181CF53C</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>59</integer>
+	<integer>61</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
