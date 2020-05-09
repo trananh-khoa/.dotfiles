@@ -20,6 +20,7 @@ brew install vim                        # Lightweight text editor
 brew cask install alfred                # Replacement for spotlight
 brew cask install appcleaner            # App deleter
 brew cask install cheatsheet            # Key bindings displayer
+brew cask install discord               # Video conferencing software
 brew cask install google-chrome         # Internet browser
 brew cask install iterm2                # Replacement for terminal
 brew cask install rectangle             # Window placement manager
