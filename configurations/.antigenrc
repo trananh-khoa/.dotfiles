@@ -12,6 +12,7 @@ antigen bundle osx
 antigen bundle pip
 antigen bundle pipenv
 antigen bundle pyenv
+antigen bundle yarn
 
 # Other bundles
 antigen bundle lukechilds/zsh-nvm
