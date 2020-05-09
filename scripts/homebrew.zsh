@@ -23,4 +23,5 @@ brew cask install cheatsheet            # Key bindings displayer
 brew cask install google-chrome         # Internet browser
 brew cask install iterm2                # Replacement for terminal
 brew cask install rectangle             # Window placement manager
+brew cask install spotify               # Music player
 brew cask install visual-studio-code    # Text editor

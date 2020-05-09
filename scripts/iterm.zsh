@@ -24,3 +24,9 @@ rm -rf ~/iTerm2-Color-Schemes
 # Install antigen
 
 brew install antigen
+
+# Install fonts
+
+brew tap homebrew/cask-fonts
+brew cask install font-meslolg-nerd-font
+brew cask install font-saucecodepro-nerd-font
