@@ -17,5 +17,5 @@ pyenv global ${LATEST_PYTHON_VERSION}
 
 # Upgrade default pip packages and install base pip packages
 
-pip install --upgrade pip
-pip install ipython
+pip3 install --upgrade pip
+pip3 install ipython
