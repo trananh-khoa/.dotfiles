@@ -29,4 +29,4 @@ brew install antigen
 
 brew tap homebrew/cask-fonts
 brew cask install font-meslo-lg-nerd-font
-brew cask install font-saucecodepro-nerd-font
+brew cask install font-sauce-code-pro-nerd-font
