@@ -13,6 +13,5 @@
     // Terminal
     // Appearance
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "GitHub Dark Default",
-    "window.zoomLevel": 1
+    "workbench.colorTheme": "GitHub Dark Default"
 }

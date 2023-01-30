@@ -87,3 +87,36 @@ echo 'Reminder: add $HOME to favorites'
 
 # Show battery percentage
 defaults write $HOME/Library/Preferences/ByHost/com.apple.controlcenter BatteryShowPercentage -bool true
+
+################################################################################
+# Safari
+################################################################################
+
+# Don't send search queries to Apple
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+# Show full URL in address bar
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# Do not track
+defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+# Update extensions automatically
+defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+
+################################################################################
+# Mac App Store
+################################################################################
+
+# Enable automatic update check
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+
+# Download newly available updates in background
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
+# Install security updates
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+
+# Enable app auto-update
+defaults write com.apple.commerce AutoUpdate -bool true
