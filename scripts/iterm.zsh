@@ -1,32 +1,35 @@
 #!/bin/zsh
 
-####################################################################################################
-# This script configures the iTerm terminal                                                        #
-####################################################################################################
+################################################################################
+# Script Name	: iTerm2 Setup
+# Description	: This script sets up iTerm2 preferences and shell extensions.
+#                 Note that this script should be run from iTerm2 (it is assumed
+#                 that iTerm2 is already installed). Restart terminal after.
+################################################################################
 
-# Install iTerm2 colour schemes
+# Make sure Homebrew is up-to-date
+brew update && brew upgrade && brew cleanup
 
-git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git
-
-# Install shell integration
-
-curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
+# Install custom theme
+open $HOME/.dotfiles/configurations/snazzy.itermcolors
 
 # Set preferences folder
-
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string '~/.dotfiles/configurations/'
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string $HOME/.dotfiles/configurations/
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
-# Remove iTerm2 colour schemes
+# Install oh-mh-zsh plugin manager
+# Plugins are specified in the .zshrc file
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-rm -rf ~/iTerm2-Color-Schemes
+# Install custom plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# Install antigen
+# Install powerlevel10k
+# This will prompt installation of recommended font
+# Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-brew install antigen
-
-# Install fonts
-
-brew tap homebrew/cask-fonts
-brew cask install font-meslo-lg-nerd-font
-brew cask install font-sauce-code-pro-nerd-font
+# Symlink configurations
+ln -sf ${HOME}/.dotfiles/configurations/.p10k.zsh ${HOME}/.p10k.zsh
+ln -sf ${HOME}/.dotfiles/configurations/.zshrc ${HOME}/.zshrc

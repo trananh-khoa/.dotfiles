@@ -1,6 +1,6 @@
 # .dotfiles
 
-The `.dotfiles` repository holds scripts and configurations for quickly setting up a MacOS environment.
+The `.dotfiles` repository holds scripts and configurations for quickly setting up a macOS environment.
 
 ### Installing
 
@@ -11,20 +11,20 @@ cd $HOME
 git clone https://github.com/trananh-khoa/.dotfiles.git
 ```
 
-Execute the appropiate scripts in the `.dotfiles/scripts` directory. Note that some scripts may depend on the execution of another and that some configurations depend on the execution of certain scripts.
+Execute the appropriate scripts in the `.dotfiles/scripts` directory. Note that some scripts may depend on the execution of another and that some configurations depend on the execution of certain scripts.
 
 ```zsh
 cd $HOME
 
-# Install Homebrew and common packages and applications (Needs to be executed first!)
+# Install Homebrew and common packages and applications (Needs to be executed first!).
+# Can be executed on default terminal.
+# NEEDS TO BE INSTALLED FIRST
 ./.dotfiles/scripts/homebrew.zsh
 
-# Install language/application specific packages and applications
-./.dotfiles/scripts/git.zsh
+# Set up shell and terminal.
+# Needs to be executed on iTerm2
+# NEEDS TO BE INSTALLED SECOND
 ./.dotfiles/scripts/iterm.zsh
-./.dotfiles/scripts/java.zsh
-./.dotfiles/scripts/python.zsh
 
-# Symlink configurations (Needs to be executed last!)
-./.dotfiles/scripts/symlink.zsh
+# The following scripts can be installed in any order
 ```

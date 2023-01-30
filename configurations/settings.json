@@ -1,0 +1,18 @@
+{
+    // Editor settings
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    // File saving
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    // Terminal
+    // Appearance
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "window.zoomLevel": 1
+}

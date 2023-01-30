@@ -1,27 +1,40 @@
 #!/bin/zsh
 
-####################################################################################################
-# This script installs Homebrew packages and MacOS applications                                    #
-####################################################################################################
+################################################################################
+# Script Name	: Homebrew Setup
+# Description	: This script installs Homebrew and installs useful packages.
+#                 Note that other scripts will require this script to be run
+#                 first. Restart the terminal and switch to iTerm2 after running
+#                 this script.
+################################################################################
 
 # Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# Add Homebrew to PATH for the remainder of the script to work
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Install general command line packages
+# Install GNU core utilities (replace macOS outdated ones)
+# Add to PATH to use normal names: PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+brew install coreutils
 
-brew install ack                        # Replacement for grep
-brew install autoenv                    # Automatic enviornment activation
-brew install tree                       # Quick look into file structures
-brew install vim                        # Lightweight text editor
+# Install GNU find utilities
+# Add to PATH to use normal names: PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
+brew install findutils
 
-# Install applications
+# Install recent versions of macOS tools
+brew install grep
+brew install neovim	# Set as default editor: export EDITOR="nvim"
 
-brew cask install alfred                # Replacement for spotlight
-brew cask install cheatsheet            # Key bindings displayer
-brew cask install discord               # Video conferencing software
-brew cask install google-chrome         # Internet browser
-brew cask install iterm2                # Replacement for terminal
-brew cask install rectangle             # Window placement manager
-brew cask install spotify               # Music player
-brew cask install visual-studio-code    # Text editor
+# Install useful binaries
+brew install ack
+brew install git
+brew install tree
+
+# Install iTerm2 (other scripts require iTerm2 to be installed)
+brew install --cask iterm2
+
+# Remove outdated versions from the cellar
+brew cleanup
