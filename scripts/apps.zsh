@@ -10,9 +10,12 @@
 brew update && brew upgrade && brew cleanup
 
 # Install Rectangle
+# TODO: Find a way to load settings file
 brew install --cask rectangle
 
-# TODO: Find a way to load settings file
-
 # Install Alfred
+# TODO: Find a way to load settings file
 brew install --cask alfred
+
+# Install Spotify
+brew install --cask spotify
