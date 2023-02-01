@@ -25,8 +25,9 @@ brew install coreutils
 brew install findutils
 
 # Install recent versions of macOS tools
+brew install gnu-sed
 brew install grep
-brew install neovim	# Set as default editor: export EDITOR="nvim"
+brew install neovim
 
 # Install useful binaries
 brew install ack

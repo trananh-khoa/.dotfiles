@@ -78,6 +78,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    poetry
     brew
     git
     macos
@@ -120,3 +121,6 @@ source $ZSH/oh-my-zsh.sh
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Poetry configuration
+export PATH="$HOME/.local/bin:$PATH"
