@@ -18,3 +18,6 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 # Configure username and email
 git config --global user.name "trananh-khoa"
 git config --global user.email "trananh_khoa@outlook.com"
+
+# Configure default editor
+git config --global core.editor "nvim"
