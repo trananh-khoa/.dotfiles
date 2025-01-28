@@ -1,170 +1,125 @@
-[aws]
-symbol = "  "
+"$schema" = 'https://starship.rs/config-schema.json'
 
-[buf]
-symbol = " "
+format = """
+[╭](fg:current_line)\
+$status\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$python\
+$swift\
+$nodejs\
+$bun\
+$rust\
+$time\
+$line_break\
+$character\
+"""
 
-[c]
-symbol = " "
+palette = 'catppuccin_mocha'
+add_newline = true
 
-[conda]
-symbol = " "
+[palettes.catppuccin_mocha]
+foreground = '#D9E0EE'
+background = '#1E1E2E'
+current_line = '#6c7086'
+primary = '#313244'
+box = '#45475a'
+blue = '#8AADF4'
+cyan = '#76E3F6'
+green = '#A6E3A1'
+orange = '#F9AF74'
+pink = '#F5BDE6'
+purple = '#CBA6F7'
+red = '#F38BA8'
+yellow = '#F9E2AF'
+status = "#e23140"
 
-[crystal]
-symbol = " "
+[palettes.tokyo_night]
+foreground = '#D8D8D8'
+background = '#1A1B26'
+current_line = '#2A2C37'
+primary = '#292E42'
+box = '#2A2C37'
+blue = '#7AA2F7'
+cyan = '#7FDBCA'
+green = '#98C379'
+orange = '#FF9E64'
+pink = '#FF75A0'
+purple = '#BB80B3'
+red = '#F7768E'
+yellow = '#E5C07B'
+status = "#e23140"
 
-[dart]
-symbol = " "
+[status]
+format = ' (fg:foreground)[](fg:status)[](fg:primary bg:status)[](fg:status bg:box)[ $status](fg:foreground bg:box)[](fg:box)'
+pipestatus = true
+pipestatus_separator = "-"
+pipestatus_segment_format = "$status"
+pipestatus_format = "[─](fg:current_line)[](fg:status)[](fg:primary bg:status)[](fg:status bg:box)[ $pipestatus](fg:foreground bg:box)[](fg:box)"
+disabled = false
 
 [directory]
-read_only = " 󰌾"
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fennel]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
+format = ' [](fg:pink)[](fg:primary bg:pink)[](fg:pink bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
+home_symbol = " ~/"
+truncation_symbol = ' '
+truncation_length = 2
+read_only = ' '
+read_only_style = ''
 
 [git_branch]
-symbol = " "
+format = ' [](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)'
+symbol = ''
 
-[git_commit]
-tag_symbol = '  '
-
-[golang]
-symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[hostname]
-ssh_symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[kotlin]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[ocaml]
-symbol = " "
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-
-[package]
-symbol = "󰏗 "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[pijul_channel]
-symbol = " "
+[git_status]
+format = '[$all_status](fg:green bg:box)[](fg:box)'
+conflicted = ' ='
+up_to_date = ''
+untracked = ' ?${count}'
+stashed = ' $'
+modified = ' !${count}'
+staged = ' +'
+renamed = ' »'
+deleted = ' ✘'
+ahead = ' ⇡${count}'
+diverged = ' ⇕⇡${ahead_count}⇣${behind_count}'
+behind = ' ⇣${count}'
 
 [python]
-symbol = " "
-
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = "󱘗 "
-
-[scala]
-symbol = " "
+format = ' [](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ (${version} )(\($virtualenv\) )](fg:foreground bg:box)[](fg:box)'
+symbol = ' P'
 
 [swift]
-symbol = " "
+format = ' [](fg:blue)[$symbol](fg:primary bg:blue)[](fg:blue bg:box)[ (${version} )(\($virtualenv\) )](fg:foreground bg:box)[](fg:box)'
+symbol = ' S'
 
-[zig]
-symbol = " "
+[nodejs]
+format = ' [](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' N'
 
-[gradle]
-symbol = " "
+[bun]
+format = ' [](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' B'
+
+[rust]
+format = ' [](fg:yellow)[$symbol](fg:primary bg:yellow)[](fg:yellow bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = ' R'
+
+[fill]
+symbol = ' '
+style = 'fg:current_line'
+
+[time]
+format = ' [](fg:purple)[ T](fg:primary bg:purple)[](fg:purple bg:box)[ $time](fg:foreground bg:box)[](fg:box) '
+time_format = '%H:%M'
+disabled = false
+
+[character]
+format = """
+[╰─$symbol](fg:current_line) """
+success_symbol = '[](fg:bold white)'
+error_symbol = '[×](fg:bold red)'
+
+[profiles]
+transient = """$character"""

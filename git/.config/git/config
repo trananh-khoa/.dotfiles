@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name = Khoa Tran
 	email = trananh_khoa@outlook.com
+[init]
+	defaultBranch = main

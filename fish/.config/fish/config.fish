@@ -2,7 +2,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     # https://zellij.dev/documentation/integration#fish
-    eval (zellij setup --generate-auto-start fish | string collect)
 end
 
 # Fish greeting
@@ -46,4 +45,4 @@ starship init fish | source
 
 # Zoxide configuration and abbreviations
 zoxide init fish | source
-abbr --add cd 'z'
+abbr --add cd z
