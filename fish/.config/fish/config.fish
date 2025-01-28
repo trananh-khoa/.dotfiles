@@ -30,4 +30,3 @@ starship init fish | source
 
 # Zoxide configuration and abbreviations
 zoxide init fish | source
-abbr --add cd z
